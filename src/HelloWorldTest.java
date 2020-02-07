@@ -1,3 +1,5 @@
+import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.api.DisplayName;
@@ -15,6 +17,13 @@ class HelloWorldTest {
     @ExtendWith(MyTestTemplate.class)
     void test(String fruit){
         assertTrue(fruits.contains(fruit));
+    }
+
+    @RepeatedTest(5)
+    @Test
+    @DisplayName("重复测试")
+    void test2(){
+        assertEquals(100,100);
     }
 
 }

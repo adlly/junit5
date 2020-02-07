@@ -1,5 +1,6 @@
 import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 //import static org.hamcrest.Matchers.is;
@@ -10,6 +11,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.*;
 
+@DisplayName("class name")
 class CalculateTest {
 
 //    @org.junit.jupiter.api.Test
@@ -29,11 +31,13 @@ class CalculateTest {
 //        assertLinesMatch(s1,s2);
 //    }
     @Test
+    @DisplayName("method name1")
     void test3_assumeTrue(){
         assumeTrue("abc".equalsIgnoreCase("ABC"));
 
     }
 
+    @DisplayName("method name2")
     @Test
     void test4_assumeTrue(){
         assumeTrue("abc".equals("Abc"),"assume failed");

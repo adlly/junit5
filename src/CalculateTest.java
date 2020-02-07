@@ -2,6 +2,7 @@ import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Disabled;
 
 //import static org.hamcrest.Matchers.is;
 import java.util.Arrays;
@@ -54,6 +55,8 @@ class CalculateTest {
     }
 
     @Test
+    @DisplayName("禁用")
+    @Disabled
     void test7_assumingThat(){
         assumingThat("abc".equals("abc"),()->
         {

@@ -1,8 +1,9 @@
 import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.*;
+
+import static org.junit.jupiter.api.Tag.*;
+import static org.junit.jupiter.api.Tags.*;
 
 //import static org.hamcrest.Matchers.is;
 import java.util.Arrays;
@@ -63,5 +64,19 @@ class CalculateTest {
             assertEquals("abc","Abc");
         });
     }
+
+    @Test
+    @Tag("one")
+    void test8(){
+    }
+
+    @Test
+    @Tag("two")
+    @Tag("three")
+    void test9(){}
+
+    @Test
+    @Tags({@Tag("four"),@Tag("five")})
+    void test10(){}
 
 }

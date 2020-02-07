@@ -12,7 +12,7 @@ public class MyTestTemplate implements TestTemplateInvocationContextProvider {
 
     @Override
     public Stream<TestTemplateInvocationContext> provideTestTemplateInvocationContexts(ExtensionContext extensionContext) {
-        return Stream.of(invocationContext("apple"),invocationContext("banana"));
+        return Stream.of(invocationContext("xxxx"),invocationContext("banana"));
     }
     //实现方法@Test
     private TestTemplateInvocationContext invocationContext(String parameters) {

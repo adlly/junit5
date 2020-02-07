@@ -53,7 +53,7 @@ class CalculateTest {
     void test7_assumingThat(){
         assumingThat("abc".equals("abc"),()->
         {
-            assertEquals("abc","abc");
+            assertEquals("abc","Abc");
         });
     }
 

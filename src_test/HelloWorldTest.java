@@ -39,6 +39,11 @@ class HelloWorldTest {
     void test2(){
         assertEquals(100,100);
     }
+    @DisplayName("repetition2")
+    @RepeatedTest(value=1,name = "{displayName} {currentRepetition}/{totalRepetitions}")
+    void test3(TestInfo testInfo){
+        assertEquals(testInfo.getDisplayName(),"repetition2 1/1");
+    }
 
 
 

@@ -1,30 +1,23 @@
-import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Tag.*;
-import static org.junit.jupiter.api.Tags.*;
-
-//import static org.hamcrest.Matchers.is;
-import java.util.Arrays;
-import java.util.List;
-
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.hamcrest.Matchers.is;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assumptions.*;
 
 @DisplayName("class name")
 class CalculateTest {
 
-//    @org.junit.jupiter.api.Test
-//    void add() {
-//    }
-//    @Test
-//    void test1(){
-//        assertThat(5-2, Matchers.is(Matchers.equalTo(3)));
-//        assertThat(4-3,Matchers.is(Matchers.equalTo(2)));
-//        assertThat("hardwork",Matchers.endsWith("work"));
-//    }
+    @org.junit.jupiter.api.Test
+    void add() {
+    }
+    @Test
+    void test1(){
+        assertThat(5-2, Matchers.is(Matchers.equalTo(3)));
+        assertThat(4-3,Matchers.is(Matchers.equalTo(2)));
+        assertThat("hardwork",Matchers.endsWith("work"));
+    }
 
 //    @Test
 //    void test2(){

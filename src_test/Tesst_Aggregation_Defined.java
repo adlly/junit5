@@ -19,15 +19,16 @@ public class Tesst_Aggregation_Defined {
     void test(@AggregateWith(PersonAggregator.class) Person person){
 
     }
-}
-public class PersonAggregator implements ArgumentsAggregator{
+    public class PersonAggregator implements ArgumentsAggregator{
 
-    @Override
-    public Object aggregateArguments(ArgumentsAccessor argumentsAccessor, ParameterContext parameterContext) throws ArgumentsAggregationException {
-        return new Person(
-                argumentsAccessor.getString(0),
-                argumentsAccessor.getString(1),
-                argumentsAccessor.get(2,Gender.class),
-                argumentsAccessor.get(3, LocalDate.class));
+        @Override
+        public Person aggregateArguments(ArgumentsAccessor argumentsAccessor, ParameterContext parameterContext) throws ArgumentsAggregationException {
+            return new Person(
+                    argumentsAccessor.getString(0),
+                    argumentsAccessor.getString(1),
+                    argumentsAccessor.get(2,Gender.class),
+                    argumentsAccessor.get(3, LocalDate.class));
+        }
     }
 }
+
